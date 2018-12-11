@@ -1,0 +1,41 @@
+<!-- Estendemos do template base -->
+{% extends "agenda/_layouts/base.html" %}
+
+<!-- Bloco que define o <title></title> da nossa página -->
+{% block title %}Página Inicial{% endblock %}
+
+<!-- Bloco de conteúdo da nossa página -->
+{% block conteudo %}
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Cadastrar Contato</h5>
+          <p class="card-text">
+            Cadastre aqui um novo <code>Contato</code>.
+          </p>
+          <a href="{% url 'agenda:cadastra_contato' %}"
+             class="btn btn-primary">
+            Novo Contato
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Lista de Contato</h5>
+          <p class="card-text">
+            Veja aqui a lista de <code>Contatos</code> cadastrados.
+          </p>
+          <a href="{% url 'agenda:lista_contatos' %}"
+             class="btn btn-primary">
+            Vá para Lista
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

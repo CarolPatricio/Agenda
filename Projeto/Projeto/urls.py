@@ -15,7 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
+from django.conf.urls import include
 urlpatterns = [
+# Inclui as URLs do app agenda
+path('', include('agenda.urls', namespace='agenda')),
+
+
     path('admin/', admin.site.urls),
 ]
