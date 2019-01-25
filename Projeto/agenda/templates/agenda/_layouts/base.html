@@ -41,13 +41,29 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'agenda:lista_contatos' %}">Contatos</a>
                     </li>
+                    {% if user.is_authenticated %}
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'logout' %}">Sair</a>
+    </li>
+{% else %}
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'login' %}">Login</a>
+    </li>
+{% endif %}
                 </ul>
                 <ul class="navbar-nav float-right">
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><b>Hora: </b>{% tempo_atual %}</a>
+                        <a class="nav-link" href="#"><b>{% if user.is_authenticated %}
+    <p class="logged-in-p">
+        Olá {{ user.username }} seja bem vindo!
+    </p>
+{% endif %}</a>
                     </li>
                 </ul>
             </div>
+	    </ul>
+	  </div>
+	</nav>
         </nav>
         
         <!-- Conteúdo do site -->

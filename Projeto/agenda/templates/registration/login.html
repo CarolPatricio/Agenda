@@ -1,0 +1,31 @@
+ {% load static %}
+     <link rel="shortcut icon" href="{% static 'agenda/img/livros.jpg' %}" type="image/jpg">
+  <!-- Arquivos CSS -->
+        <link rel="stylesheet" type="text/css" href="{% static 'agenda/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'agenda/css/master.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'agenda/css/login.css' %}">
+     
+
+        {% block styles %}{% endblock %}
+{% block title %}{% endblock %}
+{% block content %}
+<html>
+<div class="contorno">
+    <div class="login">
+        <h1>Faça o seu login</h1>
+        <form action="." method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input class="btn btn-primary" type="submit" value="Login">
+        </form>
+    </div>
+    </div>
+    </html>
+      <!-- Scripts .js -->
+        <script src="{% static 'agenda/js/jquery.min.js' %}"></script>
+        <script src="{% static 'agenda/js/bootstrap.min.js' %}"></script>
+
+        {% block scripts %}{% endblock %}
+
+        <script src="{% static 'agenda/js/scripts.js' %}"></script>
+{% endblock %}

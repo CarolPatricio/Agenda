@@ -1,0 +1,27 @@
+.login{
+
+    border-style: solid;
+    border: 11px solid green;
+    border-image-source: linear-gradient(to right, #001d37 , #004788 , #0061b9, #0084FB, #66b7ff, #bbaa1e, #E4DA78, #FFE400,#FFF066,#fff5a4 );
+    border-image-slice: 1;
+    padding: 0;
+    width: 512px;
+    position: relative;
+    top: 246px;
+    left: 106px;
+    z-index: 1;
+}
+
+.contorno{
+   
+    position: relative;
+    top: 112px;
+    left: 619px;
+    width: 710px;
+    height: 707px;
+    background-image: linear-gradient(#010a13, #f8f9fa);
+}
+
+body{
+    background: url("/static/agenda/img/livros.jpg")
+}
