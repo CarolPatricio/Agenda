@@ -1,14 +1,11 @@
 .login{
 
-    border-style: solid;
-    border: 11px solid green;
-    border-image-source: linear-gradient(to right, #001d37 , #004788 , #0061b9, #0084FB, #66b7ff, #bbaa1e, #E4DA78, #FFE400,#FFF066,#fff5a4 );
-    border-image-slice: 1;
+   
     padding: 0;
     width: 512px;
     position: relative;
-    top: 246px;
-    left: 106px;
+    top: 49px;
+    left: 224px;
     z-index: 1;
 }
 
@@ -19,9 +16,34 @@
     left: 619px;
     width: 710px;
     height: 707px;
-    background-image: linear-gradient(#010a13, #f8f9fa);
+    background-image: linear-gradient(#d935dc, #3588dc);
 }
 
 body{
     background: url("/static/agenda/img/livros.jpg")
+}
+
+img{
+    position: relative;
+    left: 33px;
+}
+h1{
+color: #fff;
+}
+
+label{
+    font-size: 23px;
+    color: #fff;
+}
+
+input{
+    border-radius: 30px;
+}
+
+#logar{
+    position: relative;
+    right: 69px;
+    width: 420px;
+    height: 60px;
+    border-radius: 30px;
 }

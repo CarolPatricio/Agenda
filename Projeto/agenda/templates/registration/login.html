@@ -12,11 +12,12 @@
 <html>
 <div class="contorno">
     <div class="login">
+      <img src="{% static 'agenda/img/learning.svg' %}" height="200px">
         <h1>Faça o seu login</h1>
         <form action="." method="post">
             {% csrf_token %}
             {{ form.as_p }}
-            <input class="btn btn-primary" type="submit" value="Login">
+            <input id="logar" class="btn btn-light" type="submit" value="Login">
         </form>
     </div>
     </div>
