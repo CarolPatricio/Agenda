@@ -5,6 +5,8 @@
 {% load primeira_letra %}
 
 {% block conteudo %}
+
+{% if user.is_authenticated %}
 <div class="container mt-5">
   <div class="row">
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -66,4 +68,7 @@
     </div>
   </div>
 </div>
+{% else %}
+<a href="{% url 'login' %}"> Entrar</a>
+{% endif %}
 {% endblock %}
