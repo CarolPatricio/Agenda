@@ -40,7 +40,9 @@
   </div>
 </div>
 {% else %}
-<p>Seja bem vindo a sua agenda de contatos, faça o login para ter acesso completo ao sistema:</p>
-<a href="{% url 'login' %}"> Entrar</a>
+<div class="container">
+<p class="bem-vindo">Seja bem vindo a sua agenda de contatos, faça o login para ter acesso completo ao sistema:</p>
+<button type="button" class="btn btn-primary botao-entrar" href="{% url 'login' %}" ><a class="entrar" href="{% url 'login' %}"> Entrar</a></button>
+</div>
 {% endif %}
 {% endblock %}
