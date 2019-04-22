@@ -2,7 +2,7 @@ from django.urls import reverse_lazy
 from django.views.generic import TemplateView, ListView, UpdateView, CreateView, DeleteView
 from Projeto.models import Contato
 from agenda.forms import InsereContatoForm
-
+from django.shortcuts import render
 
 # PÁGINA PRINCIPAL
 # ----------------------------------------------
@@ -49,3 +49,14 @@ class ContatoDeleteView(DeleteView):
     model = Contato
     context_object_name = 'contatos'
     success_url = reverse_lazy("agenda:lista_contatos")
+
+
+
+
+def error_404(request):
+        data = {}
+        return render(request,'agenda/error_404.html', data)
+
+def error_500(request):
+        data = {}
+        return render(request,'agenda/error_500.html', data)
